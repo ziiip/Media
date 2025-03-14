@@ -17,7 +17,8 @@ struct AlbumView: View {
             Text("\(album.allMedia.count) media items").font(.footnote).padding(.vertical)
 
             List {
-                if let audios = album.audios, audios.count > 0 {
+                let audios = album.audios
+                if audios.count > 0 {
                     Section {
                         NavigationLink(destination: AudiosView(audios: audios)) {
                             Text("Audios (\(audios.count))")
@@ -25,7 +26,8 @@ struct AlbumView: View {
                     }
                 }
 
-                if let livePhotos = album.livePhotos, livePhotos.count > 0 {
+                let livePhotos = album.livePhotos
+                if livePhotos.count > 0 {
                     Section {
                         NavigationLink(destination: LivePhotosView(livePhotos: livePhotos)) {
                             Text("Live Photos (\(livePhotos.count))")
@@ -33,7 +35,8 @@ struct AlbumView: View {
                     }
                 }
 
-                if let photos = album.photos, photos.count > 0 {
+                let photos = album.photos
+                if photos.count > 0 {
                     Section {
                         NavigationLink(destination: PhotosView(photos: photos)) {
                             Text("Photos (\(photos.count))")
@@ -41,7 +44,8 @@ struct AlbumView: View {
                     }
                 }
 
-                if let videos = album.videos, videos.count > 0 {
+                let videos = album.videos
+                if videos.count > 0 {
                     Section {
                         NavigationLink(destination: VideosView(videos: videos)) {
                             Text("Videos (\(videos.count))")

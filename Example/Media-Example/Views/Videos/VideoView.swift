@@ -51,7 +51,8 @@ struct VideoView: View {
                 }
         case let .loaded(previewImage):
             VStack {
-                if let videoSubtypes = video.subtypes {
+                let videoSubtypes = video.subtypes
+                if videoSubtypes.count > 0 {
                     Text(videoSubtypes.map { String(describing: $0) }.joined(separator: ", ")).font(.headline)
                 }
 
