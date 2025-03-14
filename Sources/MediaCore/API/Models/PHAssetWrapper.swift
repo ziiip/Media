@@ -11,7 +11,7 @@ import Photos
 /// a `PHAsset` instance
 ///
 public final class PHAssetWrapper {
-    var value: PHAsset?
+    public var value: PHAsset?
 
     init(value: PHAsset) {
         self.value = value
