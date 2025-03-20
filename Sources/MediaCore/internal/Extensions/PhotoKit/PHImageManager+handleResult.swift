@@ -7,7 +7,7 @@
 
 import Photos
 
-extension PHImageManager {
+public extension PHImageManager {
     static func handleResult<T>(result: (item: T?, info: [AnyHashable : Any]?),
                                 _ completion: @escaping ResultGenericCompletion<T>) {
         if let error = result.info?[PHImageErrorKey] as? Error {

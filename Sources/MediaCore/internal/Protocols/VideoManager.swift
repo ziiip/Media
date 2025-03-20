@@ -7,11 +7,11 @@
 
 import Photos
 
-typealias RequestPlayerItemResultHandler = (AVPlayerItem?, [AnyHashable : Any]?) -> Void
-typealias RequestExportSessionResultHandler = (AVAssetExportSession?, [AnyHashable : Any]?) -> Void
-typealias RequestAVAssetResultHandler = (AVAsset?, AVAudioMix?, [AnyHashable : Any]?) -> Void
+public typealias RequestPlayerItemResultHandler = (AVPlayerItem?, [AnyHashable : Any]?) -> Void
+public typealias RequestExportSessionResultHandler = (AVAssetExportSession?, [AnyHashable : Any]?) -> Void
+public typealias RequestAVAssetResultHandler = (AVAsset?, AVAudioMix?, [AnyHashable : Any]?) -> Void
 
-protocol VideoManager {
+public protocol VideoManager {
     @discardableResult
     func requestPlayerItem(forVideo asset: PHAsset, options: PHVideoRequestOptions?, resultHandler: @escaping RequestPlayerItemResultHandler) -> PHImageRequestID
 
