@@ -14,7 +14,7 @@ import Photos
 public struct Video: MediaProtocol {
     public typealias ProgressHandler = (Video.ExportProgress) -> Void
 
-    static var videoManager: VideoManager = PHImageManager.default()
+    public static var videoManager: VideoManager = PHImageManager.default()
 
     private var phAsset: PHAsset? { phAssetWrapper.value }
 

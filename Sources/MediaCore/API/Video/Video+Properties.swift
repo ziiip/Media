@@ -26,7 +26,7 @@ extension Video {
 }
 
 extension Video.Properties {
-    init(metadata: [AVMetadataItem]) {
+    public init(metadata: [AVMetadataItem]) {
         for item in metadata {
             switch item.commonKey {
             case .commonKeyLocation?:
